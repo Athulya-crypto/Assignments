@@ -55,7 +55,7 @@ short currentYear= 2023;
 System.out.println(currentYear);
 
 //11.Number of followers on a social media platform: 1,000,000
-long numberOfFollowers=1000000;
+String numberOfFollowers="1,00,0000";
 System.out.println(numberOfFollowers);
 
 //12.Rating of a movie: 7.5
