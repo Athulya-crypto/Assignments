@@ -7,11 +7,11 @@ public class Assignment3_EmpGroups {
 		
 //Creating an object for the class "Employees" for printing the values			
 		Assignment3_Employees emp=new Assignment3_Employees();
-		
-		System.out.println("EmployeeName: "+ emp.employeeNameAndIDs[0][0] +", "+"Employee ID: "+emp.employeeNameAndIDs[0][1]);
-		System.out.println("EmployeeName: "+ emp.employeeNameAndIDs[1][0]  +", "+"Employee ID: "+emp.employeeNameAndIDs[1][1] );
-		System.out.println("EmployeeName: "+ emp.employeeNameAndIDs[2][0]  +", "+"Employee ID: "+emp.employeeNameAndIDs[2][1] );
-
+	String []employeeNames= {emp.employeeName1,emp.employeeName2,emp.employeeName3};
+	int [] employeeIDs= {emp.employeeId1,emp.employeeId2,emp.employeeId3};
+	System.out.println(employeeNames[0] +":" + employeeIDs[0]);
+	System.out.println(employeeNames[1] +":" + employeeIDs[1]);
+	System.out.println(employeeNames[2] +":" + employeeIDs[2]);
 
 	}
 
