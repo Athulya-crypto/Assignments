@@ -11,6 +11,9 @@ public class Assignment4_Collection3 {
 		
 		
 		//Create a list of the top 5 highest-grossing movies of all time and print out the third movie on the list.
+		//List<String> highestGrossingMovie=new ArrayList<>();
+		
+		
 		
 		List<String> highestGrossingMovie=new LinkedList<>();
 		highestGrossingMovie.add("Avatar");

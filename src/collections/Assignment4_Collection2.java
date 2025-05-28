@@ -7,7 +7,7 @@ public class Assignment4_Collection2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+	//top 10 most visited tourist attractions in the world and print out all of them and its size.	
 		
 		List<String> cityDetails= new ArrayList<>();
 		cityDetails.add("Eiffel Tower");   // Delhi city
