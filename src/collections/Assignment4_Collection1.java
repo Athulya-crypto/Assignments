@@ -19,6 +19,9 @@ public class Assignment4_Collection1 {
 		Double combinedArea=cityDetails.get(2)+cityDetails.get(3);
 		System.out.println("The total area of the 3rd and 4th cities combined is:" +combinedArea);
 		
+		
+		
+		
 	}
 
 }
