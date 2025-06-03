@@ -12,16 +12,16 @@ public class Assignment8_loops {
 
 	public static void main(String[] args) {
 
-		int creditCount = 0;
-		int debitCount = 0;
-		int totalCredit=0;
-		int totalDedit=0;
-		int  suspiciousTransactions=0;
+		int creditCount = 0; // count of credit transactions
+		int debitCount = 0;  // count of debit transactions
+		int totalCredit=0;   // count of total credit transactions
+		int totalDedit=0;    // count of total debit transactions
+		int  suspiciousTransactions=0;  // count of total suspicious Transactions 
 		
-		
+		// array to store all debit credit transactions
 
 		int[] transactions = { 50000, -2000, 3000, -15000, -200, -300, 4000, -3000 };
-
+// to get the count of debit /credit transactions
 		for (int value : transactions) {
 			if (value > 0) {
 				
@@ -34,6 +34,8 @@ public class Assignment8_loops {
 				
 
 			}
+			
+			//to get the count of suspiciousTransactions 
 			if(Math.abs(value)>10000)
 			{
 				System.out.println("Suspicious credit/ debit Transaction with Amount");
