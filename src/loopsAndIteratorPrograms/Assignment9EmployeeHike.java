@@ -1,6 +1,7 @@
 package loopsAndIteratorPrograms;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -8,59 +9,65 @@ import java.util.Map;
 public class Assignment9EmployeeHike {
 
 	public static void main(String[] args) {
-		Map<String,String> employeeDetails= new LinkedHashMap<>();
-		employeeDetails.put("Name","Alice Johnson");
-		employeeDetails.put("Base Salary","75000.0");
-		employeeDetails.put("Experience","5.1");
-		employeeDetails.put("Year-End Rating","4.2");
-		
-		Map<String,String> employeeDetails1= new LinkedHashMap<>();
-		employeeDetails1.put("Name","Bob Smith");
-		employeeDetails1.put("Base Salary","68000.0");
-		employeeDetails1.put("Experience","3.2");
-		employeeDetails1.put("Year-End Rating","3.8");
-		
-		Map<String,String> employeeDetails2= new LinkedHashMap<>();
-		employeeDetails2.put("Name","Carol davis");
-		employeeDetails2.put("Base Salary","82000.0");
-		employeeDetails2.put("Experience","7.1");
-		employeeDetails2.put("Year-End Rating","4.5");
-		
-		Map<String,String> employeeDetails3= new LinkedHashMap<>();
-		employeeDetails3.put("Name","David Brown");
-		employeeDetails3.put("Base Salary","90000.0");
-		employeeDetails3.put("Experience","10.2");
-		employeeDetails3.put("Year-End Rating","2.5");
-		
-		
-		Map<String,String> employeeDetails4= new LinkedHashMap<>();
-		employeeDetails4.put("Name","Eva Green");
-		employeeDetails4.put("Base Salary","60000.0");
-		employeeDetails4.put("Experience","2.4");
-		employeeDetails4.put("Year-End Rating","3.5");
-		
-		
-		List<Map<String, String>> employeesData = new ArrayList<Map<String, String>>();
-		employeesData.add(employeeDetails);
-		employeesData.add(employeeDetails1);
-		employeesData.add(employeeDetails2);
-		employeesData.add(employeeDetails3);
-		employeesData.add(employeeDetails4);
-		
-		System.out.println(employeesData);
-		
-		
-		for(String value:employeeDetails1)
-		{
-			
+		String[] employees = { "Alice Johnson", "Bob smith", "Carol davis", "Davis Brown", "Eva Green" };
+
+		Double[] emp1Data = { 75000.0, 5.0, 4.2 };
+		Double[] emp2Data = { 68000.0, 5.0, 3.8 };
+		Double[] emp3Data = { 82000.0, 7.0, 4.5 };
+		Double[] emp4Data = { 90000.0, 10.0, 2.0 };
+		Double[] emp5Data = { 60000.0, 2.0, 3.5 };
+
+		Map<String, Double[]> empData = new HashMap<>();
+		empData.put(employees[0], emp1Data);
+		empData.put(employees[1], emp2Data);
+		empData.put(employees[2], emp3Data);
+		empData.put(employees[3], emp4Data);
+		empData.put(employees[4], emp5Data);
+
+		Map<String, Double> hikeMap = new HashMap<>();
+
+		for (String emp : employees) {
+			Double[] data = empData.get(emp);
+
+			double baseSalary = data[0];
+			double experience = data[1];
+			double rating = data[2];
+
+			double variablePayPercentage;
+			double bonus;
+			double reward = 0;
+
+			if (rating >= 4.0) {
+				variablePayPercentage = 15;
+				bonus = 1500;
+			}
+
+			else if (rating >= 3) {
+				variablePayPercentage = 10;
+				bonus = 1200;
+			}
+
+			else {
+				variablePayPercentage = 3;
+				bonus = 300;
+			}
+
+			if (experience > 5) {
+				reward = 5000;
+
+			}
+
+			double hike = (baseSalary * variablePayPercentage / 100) + bonus + reward;
+			double hikePercentage = (hike / baseSalary) * 100;
+
+			hikeMap.put(emp, hikePercentage);
 		}
-		
-		
-		
-		
-		
-		
-		
+		System.out.println("Employee Hike details : ");
+		System.out.println(hikeMap);
+
+		{
+
+		}
 
 	}
 
